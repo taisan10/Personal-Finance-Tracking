@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import AddTransaction from "./pages/AddTransaction.jsx";
+import AddTransaction from "./pages/Addtransaction";
 import EditTransaction from "./pages/EditTransaction";
 
 function App() {
