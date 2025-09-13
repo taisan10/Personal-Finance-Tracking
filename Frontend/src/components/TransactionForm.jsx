@@ -17,7 +17,7 @@ function TransactionForm({ mode }) {
   useEffect(() => {
     if (mode === "edit" && id) {
       axios
-        .get(`http://localhost:8000/api/transactions/${id}`)
+        .get(`https://personal-finance-tracking-production.up.railway.app/api/transactions/${id}`)
         .then((res) => {
           const { title, amount, date, category } = res.data;
           setForm({
@@ -41,9 +41,9 @@ function TransactionForm({ mode }) {
     e.preventDefault();
     try {
       if (mode === "add") {
-        await axios.post("http://localhost:8000/api/transactions", form);
+        await axios.post("https://personal-finance-tracking-production.up.railway.app/api/transactions/", form);
       } else {
-        await axios.put(`http://localhost:8000/api/transactions/${id}`, form);
+        await axios.put(`https://personal-finance-tracking-production.up.railway.app/api/transactions/${id}`, form);
       }
       navigate("/"); // back to home
     } catch (error) {
